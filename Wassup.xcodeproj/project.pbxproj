@@ -3,19 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EFD53088C6632A9C2BE8849 /* Pods_Wassup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D2FD4E33AA1AD13637548A /* Pods_Wassup.framework */; };
 		5448B66024CD99E200546151 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B65F24CD99E200546151 /* AppDelegate.swift */; };
 		5448B66224CD99E200546151 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B66124CD99E200546151 /* SceneDelegate.swift */; };
-		5448B66424CD99E200546151 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B66324CD99E200546151 /* ViewController.swift */; };
+		5448B66424CD99E200546151 /* AddPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B66324CD99E200546151 /* AddPhoneNumberViewController.swift */; };
 		5448B66724CD99E200546151 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5448B66524CD99E200546151 /* Main.storyboard */; };
 		5448B66A24CD99E200546151 /* Wassup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5448B66824CD99E200546151 /* Wassup.xcdatamodeld */; };
 		5448B66C24CD99E600546151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5448B66B24CD99E600546151 /* Assets.xcassets */; };
 		5448B66F24CD99E600546151 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5448B66D24CD99E600546151 /* LaunchScreen.storyboard */; };
 		5448B67A24CD99E600546151 /* WassupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B67924CD99E600546151 /* WassupTests.swift */; };
 		5448B68524CD99E600546151 /* WassupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B68424CD99E600546151 /* WassupUITests.swift */; };
+		5448B69424CD9B8A00546151 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B69324CD9B8A00546151 /* Gradient.swift */; };
+		5448B69624CDB22800546151 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5448B69524CDB22800546151 /* GoogleService-Info.plist */; };
+		5448B69924CDD32900546151 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B69824CDD32900546151 /* WelcomeScreenViewController.swift */; };
+		5448B69B24CDD37B00546151 /* OTPVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B69A24CDD37B00546151 /* OTPVerificationViewController.swift */; };
+		5448B69D24CDD39700546151 /* ProfileUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B69C24CDD39700546151 /* ProfileUpdateViewController.swift */; };
+		5448B69F24CDD41100546151 /* ChatListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B69E24CDD41100546151 /* ChatListingViewController.swift */; };
+		5448B6A124CDD5E400546151 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B6A024CDD5E400546151 /* Constants.swift */; };
+		5448B6A324CDD8DF00546151 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B6A224CDD8DF00546151 /* FirebaseAuthManager.swift */; };
+		5448B6A624CDECC500546151 /* FirebaseChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B6A524CDECC500546151 /* FirebaseChatManager.swift */; };
+		EE31DA2C2FF3B0DEED20D25D /* Pods_WassupTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78ABD5A65FC1FA084C8B101B /* Pods_WassupTests.framework */; };
+		FFE346F7A8DC2E07F652FDC4 /* Pods_Wassup_WassupUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC62FB7359334ED2C9A975B /* Pods_Wassup_WassupUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2328580E44733F6884F130DB /* Pods-Wassup-WassupUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wassup-WassupUITests.release.xcconfig"; path = "Target Support Files/Pods-Wassup-WassupUITests/Pods-Wassup-WassupUITests.release.xcconfig"; sourceTree = "<group>"; };
+		46D2FD4E33AA1AD13637548A /* Pods_Wassup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wassup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		513C76197868A4824F834C88 /* Pods-Wassup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wassup.release.xcconfig"; path = "Target Support Files/Pods-Wassup/Pods-Wassup.release.xcconfig"; sourceTree = "<group>"; };
 		5448B65C24CD99E200546151 /* Wassup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wassup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5448B65F24CD99E200546151 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5448B66124CD99E200546151 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5448B66324CD99E200546151 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5448B66324CD99E200546151 /* AddPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		5448B66624CD99E200546151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5448B66924CD99E200546151 /* Wassup.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wassup.xcdatamodel; sourceTree = "<group>"; };
 		5448B66B24CD99E600546151 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +66,21 @@
 		5448B68024CD99E600546151 /* WassupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WassupUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5448B68424CD99E600546151 /* WassupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WassupUITests.swift; sourceTree = "<group>"; };
 		5448B68624CD99E600546151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5448B69324CD9B8A00546151 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		5448B69524CDB22800546151 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5448B69824CDD32900546151 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
+		5448B69A24CDD37B00546151 /* OTPVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerificationViewController.swift; sourceTree = "<group>"; };
+		5448B69C24CDD39700546151 /* ProfileUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateViewController.swift; sourceTree = "<group>"; };
+		5448B69E24CDD41100546151 /* ChatListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListingViewController.swift; sourceTree = "<group>"; };
+		5448B6A024CDD5E400546151 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5448B6A224CDD8DF00546151 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		5448B6A524CDECC500546151 /* FirebaseChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseChatManager.swift; sourceTree = "<group>"; };
+		5EC62FB7359334ED2C9A975B /* Pods_Wassup_WassupUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wassup_WassupUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78ABD5A65FC1FA084C8B101B /* Pods_WassupTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WassupTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A629B2B578D09EC361C4EE7 /* Pods-Wassup-WassupUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wassup-WassupUITests.debug.xcconfig"; path = "Target Support Files/Pods-Wassup-WassupUITests/Pods-Wassup-WassupUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8F2717DB2BBB68B70C4C48A0 /* Pods-Wassup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wassup.debug.xcconfig"; path = "Target Support Files/Pods-Wassup/Pods-Wassup.debug.xcconfig"; sourceTree = "<group>"; };
+		9F22AD9BA8AE485A6271BB64 /* Pods-WassupTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WassupTests.release.xcconfig"; path = "Target Support Files/Pods-WassupTests/Pods-WassupTests.release.xcconfig"; sourceTree = "<group>"; };
+		ACFE70B01B2CE972CA59491C /* Pods-WassupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WassupTests.debug.xcconfig"; path = "Target Support Files/Pods-WassupTests/Pods-WassupTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EFD53088C6632A9C2BE8849 /* Pods_Wassup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE31DA2C2FF3B0DEED20D25D /* Pods_WassupTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFE346F7A8DC2E07F652FDC4 /* Pods_Wassup_WassupUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +118,8 @@
 				5448B67824CD99E600546151 /* WassupTests */,
 				5448B68324CD99E600546151 /* WassupUITests */,
 				5448B65D24CD99E200546151 /* Products */,
+				719D4F2D983473011559C838 /* Pods */,
+				AAD355B1BD7B99475CD7A4B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,13 +136,17 @@
 		5448B65E24CD99E200546151 /* Wassup */ = {
 			isa = PBXGroup;
 			children = (
+				5448B6A024CDD5E400546151 /* Constants.swift */,
+				5448B6A424CDD9E100546151 /* Singletons */,
+				5448B69724CDD30900546151 /* ViewControllers */,
+				5448B69224CD9B6400546151 /* HelperFiles */,
 				5448B65F24CD99E200546151 /* AppDelegate.swift */,
 				5448B66124CD99E200546151 /* SceneDelegate.swift */,
-				5448B66324CD99E200546151 /* ViewController.swift */,
 				5448B66524CD99E200546151 /* Main.storyboard */,
 				5448B66B24CD99E600546151 /* Assets.xcassets */,
 				5448B66D24CD99E600546151 /* LaunchScreen.storyboard */,
 				5448B67024CD99E600546151 /* Info.plist */,
+				5448B69524CDB22800546151 /* GoogleService-Info.plist */,
 				5448B66824CD99E200546151 /* Wassup.xcdatamodeld */,
 			);
 			path = Wassup;
@@ -131,6 +170,58 @@
 			path = WassupUITests;
 			sourceTree = "<group>";
 		};
+		5448B69224CD9B6400546151 /* HelperFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5448B69324CD9B8A00546151 /* Gradient.swift */,
+			);
+			path = HelperFiles;
+			sourceTree = "<group>";
+		};
+		5448B69724CDD30900546151 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5448B66324CD99E200546151 /* AddPhoneNumberViewController.swift */,
+				5448B69824CDD32900546151 /* WelcomeScreenViewController.swift */,
+				5448B69A24CDD37B00546151 /* OTPVerificationViewController.swift */,
+				5448B69C24CDD39700546151 /* ProfileUpdateViewController.swift */,
+				5448B69E24CDD41100546151 /* ChatListingViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5448B6A424CDD9E100546151 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				5448B6A224CDD8DF00546151 /* FirebaseAuthManager.swift */,
+				5448B6A524CDECC500546151 /* FirebaseChatManager.swift */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
+		719D4F2D983473011559C838 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F2717DB2BBB68B70C4C48A0 /* Pods-Wassup.debug.xcconfig */,
+				513C76197868A4824F834C88 /* Pods-Wassup.release.xcconfig */,
+				8A629B2B578D09EC361C4EE7 /* Pods-Wassup-WassupUITests.debug.xcconfig */,
+				2328580E44733F6884F130DB /* Pods-Wassup-WassupUITests.release.xcconfig */,
+				ACFE70B01B2CE972CA59491C /* Pods-WassupTests.debug.xcconfig */,
+				9F22AD9BA8AE485A6271BB64 /* Pods-WassupTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AAD355B1BD7B99475CD7A4B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46D2FD4E33AA1AD13637548A /* Pods_Wassup.framework */,
+				5EC62FB7359334ED2C9A975B /* Pods_Wassup_WassupUITests.framework */,
+				78ABD5A65FC1FA084C8B101B /* Pods_WassupTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5448B68924CD99E600546151 /* Build configuration list for PBXNativeTarget "Wassup" */;
 			buildPhases = (
+				9E75787A9318DCAFF8473B25 /* [CP] Check Pods Manifest.lock */,
 				5448B65824CD99E200546151 /* Sources */,
 				5448B65924CD99E200546151 /* Frameworks */,
 				5448B65A24CD99E200546151 /* Resources */,
+				3E620FADADBB783299313CFC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +248,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5448B68C24CD99E600546151 /* Build configuration list for PBXNativeTarget "WassupTests" */;
 			buildPhases = (
+				6F6A07EDF814E2693215BF90 /* [CP] Check Pods Manifest.lock */,
 				5448B67124CD99E600546151 /* Sources */,
 				5448B67224CD99E600546151 /* Frameworks */,
 				5448B67324CD99E600546151 /* Resources */,
@@ -173,9 +267,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5448B68F24CD99E600546151 /* Build configuration list for PBXNativeTarget "WassupUITests" */;
 			buildPhases = (
+				149D5ADD0A5498F65A692DF1 /* [CP] Check Pods Manifest.lock */,
 				5448B67C24CD99E600546151 /* Sources */,
 				5448B67D24CD99E600546151 /* Frameworks */,
 				5448B67E24CD99E600546151 /* Resources */,
+				EC08169D1447ADB58787EB37 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5448B66F24CD99E600546151 /* LaunchScreen.storyboard in Resources */,
+				5448B69624CDB22800546151 /* GoogleService-Info.plist in Resources */,
 				5448B66C24CD99E600546151 /* Assets.xcassets in Resources */,
 				5448B66724CD99E200546151 /* Main.storyboard in Resources */,
 			);
@@ -257,15 +354,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		149D5ADD0A5498F65A692DF1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wassup-WassupUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E620FADADBB783299313CFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wassup/Pods-Wassup-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wassup/Pods-Wassup-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wassup/Pods-Wassup-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F6A07EDF814E2693215BF90 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WassupTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E75787A9318DCAFF8473B25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wassup-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC08169D1447ADB58787EB37 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wassup-WassupUITests/Pods-Wassup-WassupUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wassup-WassupUITests/Pods-Wassup-WassupUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wassup-WassupUITests/Pods-Wassup-WassupUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5448B65824CD99E200546151 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5448B66424CD99E200546151 /* ViewController.swift in Sources */,
+				5448B69424CD9B8A00546151 /* Gradient.swift in Sources */,
+				5448B69B24CDD37B00546151 /* OTPVerificationViewController.swift in Sources */,
+				5448B66424CD99E200546151 /* AddPhoneNumberViewController.swift in Sources */,
 				5448B66024CD99E200546151 /* AppDelegate.swift in Sources */,
 				5448B66A24CD99E200546151 /* Wassup.xcdatamodeld in Sources */,
+				5448B6A124CDD5E400546151 /* Constants.swift in Sources */,
+				5448B69D24CDD39700546151 /* ProfileUpdateViewController.swift in Sources */,
+				5448B6A324CDD8DF00546151 /* FirebaseAuthManager.swift in Sources */,
+				5448B6A624CDECC500546151 /* FirebaseChatManager.swift in Sources */,
 				5448B66224CD99E200546151 /* SceneDelegate.swift in Sources */,
+				5448B69F24CDD41100546151 /* ChatListingViewController.swift in Sources */,
+				5448B69924CDD32900546151 /* WelcomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +644,7 @@
 		};
 		5448B68A24CD99E600546151 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F2717DB2BBB68B70C4C48A0 /* Pods-Wassup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -453,6 +662,7 @@
 		};
 		5448B68B24CD99E600546151 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 513C76197868A4824F834C88 /* Pods-Wassup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +680,7 @@
 		};
 		5448B68D24CD99E600546151 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACFE70B01B2CE972CA59491C /* Pods-WassupTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +702,7 @@
 		};
 		5448B68E24CD99E600546151 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F22AD9BA8AE485A6271BB64 /* Pods-WassupTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +724,7 @@
 		};
 		5448B69024CD99E600546151 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A629B2B578D09EC361C4EE7 /* Pods-Wassup-WassupUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -531,6 +744,7 @@
 		};
 		5448B69124CD99E600546151 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2328580E44733F6884F130DB /* Pods-Wassup-WassupUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
