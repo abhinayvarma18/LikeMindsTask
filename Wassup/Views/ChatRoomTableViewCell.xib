@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatRoomCell" rowHeight="106" id="KGk-i7-Jjw" customClass="ChatRoomTableViewCell" customModule="Wassup" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="332" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="332" height="106"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="OIi-Mn-HzE">
+                        <rect key="frame" x="8" y="37" width="32.5" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="OIi-Mn-HzE" secondAttribute="height" multiplier="1:1" id="9cw-M3-6Sv"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="jPg-Rn-GWY">
+                        <rect key="frame" x="56.5" y="31" width="265.5" height="44.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNf-vI-xXg">
+                                <rect key="frame" x="0.0" y="0.0" width="265.5" height="23"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWZ-cK-i5h">
+                                <rect key="frame" x="0.0" y="27" width="265.5" height="17.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="15"/>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufL-4Q-YNm">
+                        <rect key="frame" x="297" y="31" width="30" height="16.5"/>
+                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ufL-4Q-YNm" secondAttribute="trailing" constant="5" id="3dX-Kl-bex"/>
+                    <constraint firstItem="jPg-Rn-GWY" firstAttribute="centerY" secondItem="OIi-Mn-HzE" secondAttribute="centerY" id="9Ci-SR-UYp"/>
+                    <constraint firstItem="ufL-4Q-YNm" firstAttribute="top" secondItem="ZNf-vI-xXg" secondAttribute="top" id="9GD-49-xQ3"/>
+                    <constraint firstItem="OIi-Mn-HzE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="C6D-Yc-l3g"/>
+                    <constraint firstAttribute="trailing" secondItem="jPg-Rn-GWY" secondAttribute="trailing" constant="10" id="UFP-rL-8qo"/>
+                    <constraint firstItem="jPg-Rn-GWY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="WCQ-gl-aE6"/>
+                    <constraint firstItem="jPg-Rn-GWY" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="4:5" id="i7q-Ch-3rF"/>
+                    <constraint firstItem="jPg-Rn-GWY" firstAttribute="leading" secondItem="OIi-Mn-HzE" secondAttribute="trailing" constant="16" id="rWG-9s-R2R"/>
+                    <constraint firstItem="jPg-Rn-GWY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="raW-mf-dEj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="messageLabel" destination="oWZ-cK-i5h" id="EyO-2G-Rda"/>
+                <outlet property="nameLabel" destination="ZNf-vI-xXg" id="nEU-q6-h9i"/>
+                <outlet property="profileImageView" destination="OIi-Mn-HzE" id="aCw-Zi-gla"/>
+                <outlet property="timeLabel" destination="ufL-4Q-YNm" id="61u-0Q-94z"/>
+            </connections>
+            <point key="canvasLocation" x="146.37681159420291" y="162.72321428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="defaultProfilePhoto" width="300" height="273.5"/>
+    </resources>
+</document>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewContactTableViewCell" rowHeight="108" id="KGk-i7-Jjw" customClass="NewContactTableViewCell" customModule="Wassup" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="108"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="108"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="CoC-fL-UyI">
+                        <rect key="frame" x="8" y="42" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="CoC-fL-UyI" secondAttribute="height" id="RWu-WC-e8m"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="O6Q-ao-JD3">
+                        <rect key="frame" x="48" y="33.5" width="272" height="41.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oap-7g-nxK">
+                                <rect key="frame" x="0.0" y="0.0" width="272" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTM-im-R8k">
+                                <rect key="frame" x="0.0" y="24" width="272" height="17.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="15"/>
+                                <color key="textColor" red="0.35337927940000002" green="0.37982261179999999" blue="0.40784752369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="O6Q-ao-JD3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4bq-jj-e2f"/>
+                    <constraint firstAttribute="trailing" secondItem="O6Q-ao-JD3" secondAttribute="trailing" constant="20" id="AwS-YQ-z0j"/>
+                    <constraint firstItem="O6Q-ao-JD3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="C2D-Dj-42w"/>
+                    <constraint firstItem="O6Q-ao-JD3" firstAttribute="leading" secondItem="CoC-fL-UyI" secondAttribute="trailing" constant="16" id="E2g-SJ-NUu"/>
+                    <constraint firstItem="CoC-fL-UyI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="MyX-Zv-sa7"/>
+                    <constraint firstItem="CoC-fL-UyI" firstAttribute="centerY" secondItem="O6Q-ao-JD3" secondAttribute="centerY" id="fVS-WT-ZzS"/>
+                    <constraint firstItem="O6Q-ao-JD3" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="4:5" id="gia-8N-qig"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameLabel" destination="Oap-7g-nxK" id="Awv-Gc-gBf"/>
+                <outlet property="phoneNumberLabel" destination="eTM-im-R8k" id="mHy-sZ-4Jg"/>
+                <outlet property="profileImageView" destination="CoC-fL-UyI" id="ewz-R5-ueK"/>
+            </connections>
+            <point key="canvasLocation" x="152.17391304347828" y="107.14285714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="defaultProfilePhoto" width="300" height="273.5"/>
+    </resources>
+</document>

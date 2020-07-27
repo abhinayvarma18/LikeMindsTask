@@ -26,6 +26,15 @@
 		5448B6A124CDD5E400546151 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B6A024CDD5E400546151 /* Constants.swift */; };
 		5448B6A324CDD8DF00546151 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B6A224CDD8DF00546151 /* FirebaseAuthManager.swift */; };
 		5448B6A624CDECC500546151 /* FirebaseChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B6A524CDECC500546151 /* FirebaseChatManager.swift */; };
+		5448B6A924CE1B3500546151 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448B6A824CE1B3500546151 /* SpinnerView.swift */; };
+		5450DA3C24CE34070031328A /* NewContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450DA3A24CE34070031328A /* NewContactTableViewCell.swift */; };
+		5450DA3D24CE34070031328A /* NewContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5450DA3B24CE34070031328A /* NewContactTableViewCell.xib */; };
+		5450DA3F24CE35760031328A /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450DA3E24CE35760031328A /* NewContactViewController.swift */; };
+		5450DA4224CE36A10031328A /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450DA4124CE36A10031328A /* ContactModel.swift */; };
+		5450DA4424CE3A4F0031328A /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450DA4324CE3A4F0031328A /* DatabaseManager.swift */; };
+		5450DA4724CE667B0031328A /* ChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450DA4524CE667B0031328A /* ChatRoomTableViewCell.swift */; };
+		5450DA4824CE667B0031328A /* ChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5450DA4624CE667B0031328A /* ChatRoomTableViewCell.xib */; };
+		5450DA4A24CE82390031328A /* ChatMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450DA4924CE82390031328A /* ChatMessagesViewController.swift */; };
 		EE31DA2C2FF3B0DEED20D25D /* Pods_WassupTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78ABD5A65FC1FA084C8B101B /* Pods_WassupTests.framework */; };
 		FFE346F7A8DC2E07F652FDC4 /* Pods_Wassup_WassupUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC62FB7359334ED2C9A975B /* Pods_Wassup_WassupUITests.framework */; };
 /* End PBXBuildFile section */
@@ -75,6 +84,15 @@
 		5448B6A024CDD5E400546151 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5448B6A224CDD8DF00546151 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		5448B6A524CDECC500546151 /* FirebaseChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseChatManager.swift; sourceTree = "<group>"; };
+		5448B6A824CE1B3500546151 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		5450DA3A24CE34070031328A /* NewContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactTableViewCell.swift; sourceTree = "<group>"; };
+		5450DA3B24CE34070031328A /* NewContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewContactTableViewCell.xib; sourceTree = "<group>"; };
+		5450DA3E24CE35760031328A /* NewContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
+		5450DA4124CE36A10031328A /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		5450DA4324CE3A4F0031328A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		5450DA4524CE667B0031328A /* ChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCell.swift; sourceTree = "<group>"; };
+		5450DA4624CE667B0031328A /* ChatRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomTableViewCell.xib; sourceTree = "<group>"; };
+		5450DA4924CE82390031328A /* ChatMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessagesViewController.swift; sourceTree = "<group>"; };
 		5EC62FB7359334ED2C9A975B /* Pods_Wassup_WassupUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wassup_WassupUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78ABD5A65FC1FA084C8B101B /* Pods_WassupTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WassupTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A629B2B578D09EC361C4EE7 /* Pods-Wassup-WassupUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wassup-WassupUITests.debug.xcconfig"; path = "Target Support Files/Pods-Wassup-WassupUITests/Pods-Wassup-WassupUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,10 +154,12 @@
 		5448B65E24CD99E200546151 /* Wassup */ = {
 			isa = PBXGroup;
 			children = (
+				5450DA4024CE36960031328A /* Models */,
 				5448B6A024CDD5E400546151 /* Constants.swift */,
+				5450DA3924CE33E80031328A /* Views */,
 				5448B6A424CDD9E100546151 /* Singletons */,
 				5448B69724CDD30900546151 /* ViewControllers */,
-				5448B69224CD9B6400546151 /* HelperFiles */,
+				5448B69224CD9B6400546151 /* UIHelperFiles */,
 				5448B65F24CD99E200546151 /* AppDelegate.swift */,
 				5448B66124CD99E200546151 /* SceneDelegate.swift */,
 				5448B66524CD99E200546151 /* Main.storyboard */,
@@ -170,12 +190,13 @@
 			path = WassupUITests;
 			sourceTree = "<group>";
 		};
-		5448B69224CD9B6400546151 /* HelperFiles */ = {
+		5448B69224CD9B6400546151 /* UIHelperFiles */ = {
 			isa = PBXGroup;
 			children = (
 				5448B69324CD9B8A00546151 /* Gradient.swift */,
+				5448B6A824CE1B3500546151 /* SpinnerView.swift */,
 			);
-			path = HelperFiles;
+			path = UIHelperFiles;
 			sourceTree = "<group>";
 		};
 		5448B69724CDD30900546151 /* ViewControllers */ = {
@@ -186,6 +207,8 @@
 				5448B69A24CDD37B00546151 /* OTPVerificationViewController.swift */,
 				5448B69C24CDD39700546151 /* ProfileUpdateViewController.swift */,
 				5448B69E24CDD41100546151 /* ChatListingViewController.swift */,
+				5450DA3E24CE35760031328A /* NewContactViewController.swift */,
+				5450DA4924CE82390031328A /* ChatMessagesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -195,8 +218,28 @@
 			children = (
 				5448B6A224CDD8DF00546151 /* FirebaseAuthManager.swift */,
 				5448B6A524CDECC500546151 /* FirebaseChatManager.swift */,
+				5450DA4324CE3A4F0031328A /* DatabaseManager.swift */,
 			);
 			path = Singletons;
+			sourceTree = "<group>";
+		};
+		5450DA3924CE33E80031328A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5450DA3A24CE34070031328A /* NewContactTableViewCell.swift */,
+				5450DA3B24CE34070031328A /* NewContactTableViewCell.xib */,
+				5450DA4524CE667B0031328A /* ChatRoomTableViewCell.swift */,
+				5450DA4624CE667B0031328A /* ChatRoomTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5450DA4024CE36960031328A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5450DA4124CE36A10031328A /* ContactModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		719D4F2D983473011559C838 /* Pods */ = {
@@ -335,6 +378,8 @@
 				5448B69624CDB22800546151 /* GoogleService-Info.plist in Resources */,
 				5448B66C24CD99E600546151 /* Assets.xcassets in Resources */,
 				5448B66724CD99E200546151 /* Main.storyboard in Resources */,
+				5450DA4824CE667B0031328A /* ChatRoomTableViewCell.xib in Resources */,
+				5450DA3D24CE34070031328A /* NewContactTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,14 +508,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				5448B69424CD9B8A00546151 /* Gradient.swift in Sources */,
+				5450DA3F24CE35760031328A /* NewContactViewController.swift in Sources */,
+				5448B6A924CE1B3500546151 /* SpinnerView.swift in Sources */,
 				5448B69B24CDD37B00546151 /* OTPVerificationViewController.swift in Sources */,
+				5450DA4724CE667B0031328A /* ChatRoomTableViewCell.swift in Sources */,
+				5450DA4424CE3A4F0031328A /* DatabaseManager.swift in Sources */,
 				5448B66424CD99E200546151 /* AddPhoneNumberViewController.swift in Sources */,
 				5448B66024CD99E200546151 /* AppDelegate.swift in Sources */,
+				5450DA3C24CE34070031328A /* NewContactTableViewCell.swift in Sources */,
 				5448B66A24CD99E200546151 /* Wassup.xcdatamodeld in Sources */,
 				5448B6A124CDD5E400546151 /* Constants.swift in Sources */,
 				5448B69D24CDD39700546151 /* ProfileUpdateViewController.swift in Sources */,
+				5450DA4224CE36A10031328A /* ContactModel.swift in Sources */,
 				5448B6A324CDD8DF00546151 /* FirebaseAuthManager.swift in Sources */,
 				5448B6A624CDECC500546151 /* FirebaseChatManager.swift in Sources */,
+				5450DA4A24CE82390031328A /* ChatMessagesViewController.swift in Sources */,
 				5448B66224CD99E200546151 /* SceneDelegate.swift in Sources */,
 				5448B69F24CDD41100546151 /* ChatListingViewController.swift in Sources */,
 				5448B69924CDD32900546151 /* WelcomeScreenViewController.swift in Sources */,
