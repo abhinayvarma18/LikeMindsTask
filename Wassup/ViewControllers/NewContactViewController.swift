@@ -60,6 +60,7 @@ extension NewContactViewController:UITableViewDataSource,UITableViewDelegate {
         let value = DatabaseManager.shared.checkIfChatExists(imageUrl: self.contacts[indexPath.row].imageUrl ?? "")
         if value.0 {
             vc?.chatroomId = value.1
+            vc?.sender = self.contacts[indexPath.row]
         }else {
             vc?.sender = self.contacts[indexPath.row]
         }

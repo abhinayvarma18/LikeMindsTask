@@ -11,11 +11,7 @@ import UIKit
 class ChatListingViewController: UIViewController {
 
     @IBOutlet weak var chatListTableView: UITableView!
-    var chatrooms:[ChatRoom] = [] {
-        didSet {
-            chatListTableView.reloadData()
-        }
-    }
+    var chatrooms:[ChatRoom] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -31,8 +27,14 @@ class ChatListingViewController: UIViewController {
                 } else {
                     self?.chatrooms.append(chatroom!)
                 }
+                self?.sortChatRoomArray()
+                self?.chatListTableView.reloadData()
             }
         })
+    }
+    
+    func sortChatRoomArray() {
+        self.chatrooms = self.chatrooms.sorted(by: { $0.lastMessageTimeStamp > $1.lastMessageTimeStamp })
     }
     
     func getIndexOfChatroom(id:String) -> Int? {

@@ -11,6 +11,8 @@ target 'Wassup' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'SDWebImage', '~> 5.0'
+  pod 'IQKeyboardManager'
+  pod 'UnderLineTextField', '~> 2.0'
   
   target 'WassupTests' do
     inherit! :search_paths

@@ -11,6 +11,7 @@ import SDWebImage
 
 class ChatMessagesViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var senderImageView: UIImageView!
+    @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var senderName: UILabel!
     
     @IBOutlet weak var chatMessagesTableView: UITableView!
@@ -25,11 +26,7 @@ class ChatMessagesViewController: UIViewController,UITextFieldDelegate {
         }
     }
     
-    var messages:[Message] = [] {
-        didSet {
-            self.chatMessagesTableView.reloadData()
-        }
-    }
+    var messages:[Message] = []
     
     var chatroomId:String? {
         didSet {
@@ -47,6 +44,7 @@ class ChatMessagesViewController: UIViewController,UITextFieldDelegate {
         setupTableView()
         textMessageTextField.delegate = self
         updateProfileImageAndName()
+        bottomView.layer.cornerRadius = 10.0
     }
     
     private func updateProfileImageAndName() {
@@ -68,7 +66,7 @@ class ChatMessagesViewController: UIViewController,UITextFieldDelegate {
     
     private func setupTableView() {
         let imageView = UIImageView(image: UIImage(named: "bgChatroom"))
-        imageView.bounds = chatMessagesTableView.layer.bounds
+        imageView.bounds = self.view.bounds
         chatMessagesTableView.backgroundView = imageView
         chatMessagesTableView.separatorStyle = .none
         chatMessagesTableView.delegate = self
@@ -104,7 +102,13 @@ class ChatMessagesViewController: UIViewController,UITextFieldDelegate {
     func getMessages() {
         FirebaseChatManager.shared.getMessagesForChatRoom(chatroomId: chatroomId!) { [weak self](message) in
             self?.messages.append(message)
+            self?.reorderMessages()
+            self?.chatMessagesTableView.reloadData()
         }
+    }
+    
+    func reorderMessages() {
+        self.messages = self.messages.sorted(by: { $0.messageTimeStamp < $1.messageTimeStamp })
     }
     
 }
@@ -129,6 +133,14 @@ extension ChatMessagesViewController:UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "senderCell", for: indexPath) as? SenderTableViewCell
         cell?.updateCellContent(message:message)
         return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == self.messages.count - 1 {
+            DispatchQueue.main.async {
+                tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+            }
+        }
     }
 }
 

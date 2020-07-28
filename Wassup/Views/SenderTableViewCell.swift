@@ -25,7 +25,17 @@ class SenderTableViewCell: UITableViewCell {
     
     func updateCellContent(message:Message) {
            self.messageTextLabel.text = message.messageBody
-           self.timeLabel.text = String(message.messageTimeStamp)
+        self.timeLabel.text = getTimeFromTimeStamp(timestamp: message.messageTimeStamp)
+    }
+    
+    func getTimeFromTimeStamp(timestamp:Int64) -> String {
+       let date = Date(timeIntervalSince1970: Double(timestamp/1000))
+       let dateFormatter = DateFormatter()
+       dateFormatter.timeStyle = DateFormatter.Style.short //Set time style
+       dateFormatter.dateStyle = .none //Set date style
+       dateFormatter.timeZone = .current
+       let localDate = dateFormatter.string(from: date)
+       return localDate
     }
     
 }

@@ -9,12 +9,14 @@
 import UIKit
 import CoreData
 import Firebase
+import IQKeyboardManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        IQKeyboardManager.shared().isEnabled = true
         FirebaseApp.configure()
         let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         print(paths[0])
