@@ -1,5 +1,5 @@
 //
-//  ContactModel.swift
+//  Extensions.swift
 //  Wassup
 //
 //  Created by abhinay varma on 27/07/20.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct ContactModel:Codable {
-    var name:String?
-    var phone:String?
-    var imageUrl:String?
+extension Date {
+    func toMillis() -> Int64! {
+        return Int64(self.timeIntervalSince1970 * 1000)
+    }
 }

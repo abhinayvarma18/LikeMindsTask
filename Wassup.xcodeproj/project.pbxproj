@@ -30,11 +30,15 @@
 		5450DA3C24CE34070031328A /* NewContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450DA3A24CE34070031328A /* NewContactTableViewCell.swift */; };
 		5450DA3D24CE34070031328A /* NewContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5450DA3B24CE34070031328A /* NewContactTableViewCell.xib */; };
 		5450DA3F24CE35760031328A /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450DA3E24CE35760031328A /* NewContactViewController.swift */; };
-		5450DA4224CE36A10031328A /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450DA4124CE36A10031328A /* ContactModel.swift */; };
 		5450DA4424CE3A4F0031328A /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450DA4324CE3A4F0031328A /* DatabaseManager.swift */; };
 		5450DA4724CE667B0031328A /* ChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450DA4524CE667B0031328A /* ChatRoomTableViewCell.swift */; };
 		5450DA4824CE667B0031328A /* ChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5450DA4624CE667B0031328A /* ChatRoomTableViewCell.xib */; };
 		5450DA4A24CE82390031328A /* ChatMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450DA4924CE82390031328A /* ChatMessagesViewController.swift */; };
+		5450DA4D24CF40860031328A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450DA4C24CF40860031328A /* Extensions.swift */; };
+		5450DA5024CFA2F00031328A /* SenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450DA4E24CFA2F00031328A /* SenderTableViewCell.swift */; };
+		5450DA5124CFA2F00031328A /* SenderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5450DA4F24CFA2F00031328A /* SenderTableViewCell.xib */; };
+		5450DA5424CFA3030031328A /* ReceiverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450DA5224CFA3030031328A /* ReceiverTableViewCell.swift */; };
+		5450DA5524CFA3030031328A /* ReceiverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5450DA5324CFA3030031328A /* ReceiverTableViewCell.xib */; };
 		EE31DA2C2FF3B0DEED20D25D /* Pods_WassupTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78ABD5A65FC1FA084C8B101B /* Pods_WassupTests.framework */; };
 		FFE346F7A8DC2E07F652FDC4 /* Pods_Wassup_WassupUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC62FB7359334ED2C9A975B /* Pods_Wassup_WassupUITests.framework */; };
 /* End PBXBuildFile section */
@@ -88,11 +92,15 @@
 		5450DA3A24CE34070031328A /* NewContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactTableViewCell.swift; sourceTree = "<group>"; };
 		5450DA3B24CE34070031328A /* NewContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewContactTableViewCell.xib; sourceTree = "<group>"; };
 		5450DA3E24CE35760031328A /* NewContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
-		5450DA4124CE36A10031328A /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		5450DA4324CE3A4F0031328A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		5450DA4524CE667B0031328A /* ChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCell.swift; sourceTree = "<group>"; };
 		5450DA4624CE667B0031328A /* ChatRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomTableViewCell.xib; sourceTree = "<group>"; };
 		5450DA4924CE82390031328A /* ChatMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessagesViewController.swift; sourceTree = "<group>"; };
+		5450DA4C24CF40860031328A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5450DA4E24CFA2F00031328A /* SenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderTableViewCell.swift; sourceTree = "<group>"; };
+		5450DA4F24CFA2F00031328A /* SenderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SenderTableViewCell.xib; sourceTree = "<group>"; };
+		5450DA5224CFA3030031328A /* ReceiverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverTableViewCell.swift; sourceTree = "<group>"; };
+		5450DA5324CFA3030031328A /* ReceiverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiverTableViewCell.xib; sourceTree = "<group>"; };
 		5EC62FB7359334ED2C9A975B /* Pods_Wassup_WassupUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wassup_WassupUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78ABD5A65FC1FA084C8B101B /* Pods_WassupTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WassupTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A629B2B578D09EC361C4EE7 /* Pods-Wassup-WassupUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wassup-WassupUITests.debug.xcconfig"; path = "Target Support Files/Pods-Wassup-WassupUITests/Pods-Wassup-WassupUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,8 +162,7 @@
 		5448B65E24CD99E200546151 /* Wassup */ = {
 			isa = PBXGroup;
 			children = (
-				5450DA4024CE36960031328A /* Models */,
-				5448B6A024CDD5E400546151 /* Constants.swift */,
+				5450DA4B24CF40750031328A /* Helpers */,
 				5450DA3924CE33E80031328A /* Views */,
 				5448B6A424CDD9E100546151 /* Singletons */,
 				5448B69724CDD30900546151 /* ViewControllers */,
@@ -230,16 +237,21 @@
 				5450DA3B24CE34070031328A /* NewContactTableViewCell.xib */,
 				5450DA4524CE667B0031328A /* ChatRoomTableViewCell.swift */,
 				5450DA4624CE667B0031328A /* ChatRoomTableViewCell.xib */,
+				5450DA4E24CFA2F00031328A /* SenderTableViewCell.swift */,
+				5450DA4F24CFA2F00031328A /* SenderTableViewCell.xib */,
+				5450DA5224CFA3030031328A /* ReceiverTableViewCell.swift */,
+				5450DA5324CFA3030031328A /* ReceiverTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		5450DA4024CE36960031328A /* Models */ = {
+		5450DA4B24CF40750031328A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				5450DA4124CE36A10031328A /* ContactModel.swift */,
+				5448B6A024CDD5E400546151 /* Constants.swift */,
+				5450DA4C24CF40860031328A /* Extensions.swift */,
 			);
-			path = Models;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		719D4F2D983473011559C838 /* Pods */ = {
@@ -376,7 +388,9 @@
 			files = (
 				5448B66F24CD99E600546151 /* LaunchScreen.storyboard in Resources */,
 				5448B69624CDB22800546151 /* GoogleService-Info.plist in Resources */,
+				5450DA5524CFA3030031328A /* ReceiverTableViewCell.xib in Resources */,
 				5448B66C24CD99E600546151 /* Assets.xcassets in Resources */,
+				5450DA5124CFA2F00031328A /* SenderTableViewCell.xib in Resources */,
 				5448B66724CD99E200546151 /* Main.storyboard in Resources */,
 				5450DA4824CE667B0031328A /* ChatRoomTableViewCell.xib in Resources */,
 				5450DA3D24CE34070031328A /* NewContactTableViewCell.xib in Resources */,
@@ -514,14 +528,16 @@
 				5450DA4724CE667B0031328A /* ChatRoomTableViewCell.swift in Sources */,
 				5450DA4424CE3A4F0031328A /* DatabaseManager.swift in Sources */,
 				5448B66424CD99E200546151 /* AddPhoneNumberViewController.swift in Sources */,
+				5450DA5424CFA3030031328A /* ReceiverTableViewCell.swift in Sources */,
 				5448B66024CD99E200546151 /* AppDelegate.swift in Sources */,
+				5450DA5024CFA2F00031328A /* SenderTableViewCell.swift in Sources */,
 				5450DA3C24CE34070031328A /* NewContactTableViewCell.swift in Sources */,
 				5448B66A24CD99E200546151 /* Wassup.xcdatamodeld in Sources */,
 				5448B6A124CDD5E400546151 /* Constants.swift in Sources */,
 				5448B69D24CDD39700546151 /* ProfileUpdateViewController.swift in Sources */,
-				5450DA4224CE36A10031328A /* ContactModel.swift in Sources */,
 				5448B6A324CDD8DF00546151 /* FirebaseAuthManager.swift in Sources */,
 				5448B6A624CDECC500546151 /* FirebaseChatManager.swift in Sources */,
+				5450DA4D24CF40860031328A /* Extensions.swift in Sources */,
 				5450DA4A24CE82390031328A /* ChatMessagesViewController.swift in Sources */,
 				5448B66224CD99E200546151 /* SceneDelegate.swift in Sources */,
 				5448B69F24CDD41100546151 /* ChatListingViewController.swift in Sources */,

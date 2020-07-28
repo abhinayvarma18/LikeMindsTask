@@ -8,6 +8,8 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
 final class FirebaseAuthManager {
     static let shared = FirebaseAuthManager()
@@ -52,7 +54,38 @@ final class FirebaseAuthManager {
             completion?(error)
             return
           }
+         //on success login
+         
           completion?(nil)
+    
+        }
+    }
+    
+    func saveUserInfoIntoLocalDB() {
+        let phoneNumber = UserDefaults.standard.value(forKey: "phoneNumber") as? String ?? ""
+        let ref = Database.database().reference()
+        ref.child("Users").child(phoneNumber).observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? [String:String] ?? [:]
+            let userName = value["name"] ?? ""
+            let userImage = value["imageUrl"] ?? ""
+            UserDefaults.standard.setValue(userName, forKey: "name")
+            UserDefaults.standard.setValue(userImage, forKey: "image")
+        }
+    }
+    
+    func uploadProfileImage(image:Data,completion:((String?)->Void)?) {
+        let phoneNumber = UserDefaults.standard.value(forKey: "phoneNumber") as? String ?? ""
+        let storageRef = Storage.storage().reference()
+        let profileRef = storageRef.child("images/\(phoneNumber).png")
+        let _ = profileRef.putData(image, metadata: nil) { (metadata, error) in
+            profileRef.downloadURL { (url, error) in
+                guard let downloadURL = url else {
+                    // Uh-oh, an error occurred!
+                    completion?(nil)
+                    return
+                }
+                completion?(downloadURL.absoluteString)
+            }
         }
     }
 }

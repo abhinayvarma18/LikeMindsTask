@@ -17,11 +17,13 @@ final class DatabaseManager {
     var managedObjectContext:NSManagedObjectContext?
     let userEntity:NSEntityDescription?
     let chatroomEntity:NSEntityDescription?
+    let messageEntity:NSEntityDescription?
     
     init() {
          managedObjectContext = delegate?.persistentContainer.viewContext
          userEntity = NSEntityDescription.entity(forEntityName: "Contact", in: managedObjectContext!)
-        chatroomEntity = NSEntityDescription.entity(forEntityName: "ChatRoom", in: managedObjectContext!)
+         chatroomEntity = NSEntityDescription.entity(forEntityName: "ChatRoom", in: managedObjectContext!)
+         messageEntity = NSEntityDescription.entity(forEntityName: "Message", in: managedObjectContext!)
     }
     
     func saveUser(key:String,dict:[String:String], completion:((Contact?)->Void?)) {
@@ -98,7 +100,7 @@ final class DatabaseManager {
         }
     }
     
-    func updateChatRoom(id:String,lastMessage:String,lastMessageTimeStamp:String, completion:((ChatRoom?)->Void)?) {
+    func updateChatRoom(id:String,lastMessage:String,lastMessageTimeStamp:Int64, completion:((ChatRoom?)->Void)?) {
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ChatRoom")
         fetchRequest.predicate = NSPredicate(format: "chatRoomId = %@", id)
@@ -116,6 +118,37 @@ final class DatabaseManager {
         } catch {
             
         }
+    }
+    
+    func saveMessagesForChatRoom(chatRoomId:String,dict:[String:Any], completion:((Message)->Void)?) {
+        let message = NSManagedObject(entity: messageEntity!, insertInto: managedObjectContext)
+        message.setValue(dict["body"] as? String ?? "", forKey: "messageBody")
+        message.setValue(dict["sentBy"] as? String ?? "", forKey: "sentBy")
+        message.setValue(dict["timeStamp"] as? Int64 ?? 0, forKey: "messageTimeStamp")
+        message.setValue(chatRoomId, forKey: "chatroomId")
+            
+        do {
+            try managedObjectContext?.save()
+            completion?(message as! Message)
+        } catch {
+            print("could not save . \(error), \(error.localizedDescription) ")
+        }
+    }
+    
+    func checkIfChatExists(imageUrl:String) -> (Bool,String?) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ChatRoom")
+        fetchRequest.predicate = NSPredicate(format: "senderImage = %@", imageUrl)
+        do {
+            if let fetchResults = try managedObjectContext!.fetch(fetchRequest) as? [NSManagedObject] {
+                if fetchResults.count != 0{
+                    return (true,(fetchResults[0] as? ChatRoom)?.chatRoomId)
+                }
+            }
+        }catch {
+            
+        }
+        
+        return (false,nil)
     }
     
 }

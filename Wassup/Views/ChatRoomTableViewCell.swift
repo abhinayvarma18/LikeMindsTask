@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ChatRoomTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
@@ -15,6 +16,10 @@ class ChatRoomTableViewCell: UITableViewCell {
     @IBOutlet weak var messageLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
+        profileImageView.layer.masksToBounds = false
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.height/2
+        profileImageView.clipsToBounds = true
         // Initialization code
     }
 
@@ -23,12 +28,15 @@ class ChatRoomTableViewCell: UITableViewCell {
     }
     
     func updateCell(chatroom:ChatRoom) {
-        profileImageView.layer.masksToBounds = false
-        profileImageView.layer.cornerRadius = profileImageView.frame.size.height/2
-        profileImageView.clipsToBounds = true
         nameLabel.text = chatroom.senderName
         messageLabel.text = chatroom.lastMessage
-        timeLabel.text = chatroom.lastMessageTimeStamp
+        timeLabel.text = String(chatroom.lastMessageTimeStamp)
+        let placeHolderImage = UIImage(named: "defaultProfilePhoto")
+        if let url = URL(string: chatroom.senderImage ?? "") {
+            profileImageView.sd_setImage(with: url, placeholderImage: placeHolderImage, options: SDWebImageOptions(rawValue: 3), context: nil)
+        }else {
+            profileImageView.image = placeHolderImage
+        }
     }
     
 }

@@ -7,18 +7,128 @@
 //
 
 import UIKit
+import SDWebImage
 
-class ChatMessagesViewController: UIViewController {
+class ChatMessagesViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var senderImageView: UIImageView!
-    @IBOutlet weak var senderName: NSLayoutConstraint!
+    @IBOutlet weak var senderName: UILabel!
     
     @IBOutlet weak var chatMessagesTableView: UITableView!
     
     @IBOutlet weak var textMessageTextField: UITextField!
     
+    let userName = UserDefaults.standard.value(forKey: "name") as? String
+    
+    var chatroom:ChatRoom? {
+        didSet {
+            chatroomId = chatroom?.chatRoomId
+        }
+    }
+    
+    var messages:[Message] = [] {
+        didSet {
+            self.chatMessagesTableView.reloadData()
+        }
+    }
+    
+    var chatroomId:String? {
+        didSet {
+            getMessages()
+        }
+    }
+    var sender:Contact? {
+        didSet {
+          
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+        textMessageTextField.delegate = self
+        updateProfileImageAndName()
+    }
+    
+    private func updateProfileImageAndName() {
+        senderImageView.layer.masksToBounds = false
+        senderImageView.layer.cornerRadius = senderImageView.frame.size.height/2
+        senderImageView.clipsToBounds = true
+        if let url = URL(string: chatroom?.senderImage ?? "") {
+            senderImageView.sd_setImage(with: url, completed: nil)
+            senderName.text = chatroom?.senderName
+        }else {
+            if let url = URL(string: sender?.imageUrl ?? "") {
+                senderImageView.sd_setImage(with: url, completed: nil)
+                senderName.text = sender?.name
+            }else {
+                senderImageView.image = UIImage(named: "defaultProfilePhoto")
+            }
+        }
+    }
+    
+    private func setupTableView() {
+        let imageView = UIImageView(image: UIImage(named: "bgChatroom"))
+        imageView.bounds = chatMessagesTableView.layer.bounds
+        chatMessagesTableView.backgroundView = imageView
+        chatMessagesTableView.separatorStyle = .none
+        chatMessagesTableView.delegate = self
+        chatMessagesTableView.dataSource = self
+        chatMessagesTableView.register(UINib(nibName: "ReceiverTableViewCell", bundle: nil), forCellReuseIdentifier: "receiverCell")
+        chatMessagesTableView.register(UINib(nibName: "SenderTableViewCell", bundle: nil), forCellReuseIdentifier: "senderCell")
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        sendMessage()
+        textMessageTextField.resignFirstResponder()
+        return true
+    }
+    
+    private func sendMessage() {
+        self.resignFirstResponder()
+        if !(textMessageTextField.text?.isEmpty ?? true) {
+            if chatroomId == nil {
+                //create a chatroom
+                FirebaseChatManager.shared.initiateChatroomNodes(contact: sender!, message: textMessageTextField.text ?? "", completion: {[weak self](chatroomId) in
+                    self?.chatroomId = chatroomId
+                })
+            }else {
+                //send message
+                FirebaseChatManager.shared.sendMessageOnExistingChatroom(chatroomId: chatroomId!, message:textMessageTextField.text! , userName: userName ?? "")
+            }
+            textMessageTextField.text = ""
+        }else {
+            //please enter a valid message
+        }
+    }
+    
+    func getMessages() {
+        FirebaseChatManager.shared.getMessagesForChatRoom(chatroomId: chatroomId!) { [weak self](message) in
+            self?.messages.append(message)
+        }
+    }
+    
 }
+
+extension ChatMessagesViewController:UITableViewDelegate,UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message = messages[indexPath.row]
+        if message.sentBy == userName {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "receiverCell", for: indexPath) as? ReceiverTableViewCell
+            cell?.updateCellContent(message:message)
+            return cell ?? UITableViewCell()
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "senderCell", for: indexPath) as? SenderTableViewCell
+        cell?.updateCellContent(message:message)
+        return cell ?? UITableViewCell()
+    }
+}
+

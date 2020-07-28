@@ -22,14 +22,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let navVC = UINavigationController()
             navVC.navigationBar.isHidden = true
             let loggedIn = UserDefaults.standard.value(forKey: "loggedIn") as? Bool
-            let profileUpdation = UserDefaults.standard.value(forKey: "profileUpdate") as? Bool
+            let profileUpdation = UserDefaults.standard.value(forKey: "onProfile") as? Bool
             if profileUpdation ?? false {
                 let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: VCStoryBoardIds.welcomeScreen)
                 let profileVc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: VCStoryBoardIds.profileUpdate)
                 navVC.viewControllers = [vc,profileVc]
             }else if loggedIn ?? false {
                 let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: VCStoryBoardIds.welcomeScreen)
-                 let chatVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: VCStoryBoardIds.chatPage)
+                 let chatVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: VCStoryBoardIds.chatListPage)
                 navVC.viewControllers = [vc,chatVC]
             } else {
                 let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: VCStoryBoardIds.welcomeScreen)

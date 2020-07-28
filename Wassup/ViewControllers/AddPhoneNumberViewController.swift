@@ -29,6 +29,7 @@ class AddPhoneNumberViewController: UIViewController {
     }
 
     @IBAction func onClickSubmit(_ sender: Any) {
+        self.resignFirstResponder()
         let firebaseAuthManager = FirebaseAuthManager.shared
         let phoneNum = "+" + (countryCodeTextField.text ?? "91") + (phoneNumberTextField.text ?? "")
         self.loadLoaderView()

@@ -7,8 +7,11 @@ target 'Wassup' do
 
   # Pods for Wassup
   pod 'Firebase'
-  pod 'Fctirebase/Auth'
+  pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'SDWebImage', '~> 5.0'
+  
   target 'WassupTests' do
     inherit! :search_paths
     # Pods for testing

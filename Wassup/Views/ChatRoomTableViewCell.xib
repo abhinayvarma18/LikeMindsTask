@@ -16,23 +16,24 @@
                 <rect key="frame" x="0.0" y="0.0" width="332" height="106"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="OIi-Mn-HzE">
-                        <rect key="frame" x="8" y="37" width="32.5" height="32"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="OIi-Mn-HzE">
+                        <rect key="frame" x="8" y="23" width="60" height="60"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="OIi-Mn-HzE" secondAttribute="height" multiplier="1:1" id="9cw-M3-6Sv"/>
+                            <constraint firstAttribute="width" constant="60" id="GCK-bB-2zu"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="jPg-Rn-GWY">
-                        <rect key="frame" x="56.5" y="31" width="265.5" height="44.5"/>
+                        <rect key="frame" x="84" y="31" width="45" height="44.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNf-vI-xXg">
-                                <rect key="frame" x="0.0" y="0.0" width="265.5" height="23"/>
+                                <rect key="frame" x="0.0" y="0.0" width="45" height="23"/>
                                 <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWZ-cK-i5h">
-                                <rect key="frame" x="0.0" y="27" width="265.5" height="17.5"/>
+                                <rect key="frame" x="0.0" y="27" width="45" height="17.5"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="15"/>
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -51,9 +52,8 @@
                     <constraint firstItem="jPg-Rn-GWY" firstAttribute="centerY" secondItem="OIi-Mn-HzE" secondAttribute="centerY" id="9Ci-SR-UYp"/>
                     <constraint firstItem="ufL-4Q-YNm" firstAttribute="top" secondItem="ZNf-vI-xXg" secondAttribute="top" id="9GD-49-xQ3"/>
                     <constraint firstItem="OIi-Mn-HzE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="C6D-Yc-l3g"/>
-                    <constraint firstAttribute="trailing" secondItem="jPg-Rn-GWY" secondAttribute="trailing" constant="10" id="UFP-rL-8qo"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jPg-Rn-GWY" secondAttribute="trailing" constant="10" id="UFP-rL-8qo"/>
                     <constraint firstItem="jPg-Rn-GWY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="WCQ-gl-aE6"/>
-                    <constraint firstItem="jPg-Rn-GWY" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="4:5" id="i7q-Ch-3rF"/>
                     <constraint firstItem="jPg-Rn-GWY" firstAttribute="leading" secondItem="OIi-Mn-HzE" secondAttribute="trailing" constant="16" id="rWG-9s-R2R"/>
                     <constraint firstItem="jPg-Rn-GWY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="raW-mf-dEj"/>
                 </constraints>

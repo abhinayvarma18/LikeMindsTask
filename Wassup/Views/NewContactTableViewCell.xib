@@ -17,22 +17,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="defaultProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="CoC-fL-UyI">
-                        <rect key="frame" x="8" y="42" width="24" height="24"/>
+                        <rect key="frame" x="8" y="24" width="60" height="60"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="CoC-fL-UyI" secondAttribute="height" id="RWu-WC-e8m"/>
+                            <constraint firstAttribute="width" constant="60" id="ptZ-Y7-XXa"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="O6Q-ao-JD3">
-                        <rect key="frame" x="48" y="33.5" width="272" height="41.5"/>
+                        <rect key="frame" x="84" y="33.5" width="38.5" height="41.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oap-7g-nxK">
-                                <rect key="frame" x="0.0" y="0.0" width="272" height="21"/>
+                                <rect key="frame" x="0.0" y="0.0" width="38.5" height="21"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTM-im-R8k">
-                                <rect key="frame" x="0.0" y="24" width="272" height="17.5"/>
+                                <rect key="frame" x="0.0" y="24" width="38.5" height="17.5"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="15"/>
                                 <color key="textColor" red="0.35337927940000002" green="0.37982261179999999" blue="0.40784752369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -42,12 +43,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="O6Q-ao-JD3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4bq-jj-e2f"/>
-                    <constraint firstAttribute="trailing" secondItem="O6Q-ao-JD3" secondAttribute="trailing" constant="20" id="AwS-YQ-z0j"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="O6Q-ao-JD3" secondAttribute="trailing" constant="10" id="AwS-YQ-z0j"/>
                     <constraint firstItem="O6Q-ao-JD3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="C2D-Dj-42w"/>
                     <constraint firstItem="O6Q-ao-JD3" firstAttribute="leading" secondItem="CoC-fL-UyI" secondAttribute="trailing" constant="16" id="E2g-SJ-NUu"/>
                     <constraint firstItem="CoC-fL-UyI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="MyX-Zv-sa7"/>
                     <constraint firstItem="CoC-fL-UyI" firstAttribute="centerY" secondItem="O6Q-ao-JD3" secondAttribute="centerY" id="fVS-WT-ZzS"/>
-                    <constraint firstItem="O6Q-ao-JD3" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="4:5" id="gia-8N-qig"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

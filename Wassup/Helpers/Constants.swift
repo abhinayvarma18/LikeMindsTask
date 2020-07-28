@@ -13,6 +13,7 @@ struct VCStoryBoardIds {
     static let addPhone = "AddPhoneVC"
     static let verifyOTP = "VerifyOTPVC"
     static let profileUpdate = "ProfileUpdateVC"
-    static let chatPage = "ChatListingVC"
+    static let chatListPage = "ChatListingVC"
     static let newContact = "NewContactVC"
+    static let chatMessagePage = "ChatMessagesVC"
 }

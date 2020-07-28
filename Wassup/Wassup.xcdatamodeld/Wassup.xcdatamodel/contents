@@ -3,7 +3,7 @@
     <entity name="ChatRoom" representedClassName="ChatRoom" syncable="YES" codeGenerationType="class">
         <attribute name="chatRoomId" optional="YES" attributeType="String"/>
         <attribute name="lastMessage" optional="YES" attributeType="String"/>
-        <attribute name="lastMessageTimeStamp" optional="YES" attributeType="String"/>
+        <attribute name="lastMessageTimeStamp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="senderImage" optional="YES" attributeType="String"/>
         <attribute name="senderName" optional="YES" attributeType="String"/>
         <uniquenessConstraints>
@@ -25,13 +25,12 @@
     <entity name="Message" representedClassName="Message" syncable="YES" codeGenerationType="class">
         <attribute name="chatroomId" optional="YES" attributeType="String"/>
         <attribute name="messageBody" optional="YES" attributeType="String"/>
-        <attribute name="messageId" optional="YES" attributeType="String"/>
-        <attribute name="messageTimeStamp" optional="YES" attributeType="String"/>
+        <attribute name="messageTimeStamp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="sentBy" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="Contact" positionX="-63" positionY="-18" width="128" height="88"/>
         <element name="ChatRoom" positionX="-54" positionY="18" width="128" height="118"/>
-        <element name="Message" positionX="-36" positionY="45" width="128" height="118"/>
+        <element name="Message" positionX="-36" positionY="45" width="128" height="103"/>
     </elements>
 </model>

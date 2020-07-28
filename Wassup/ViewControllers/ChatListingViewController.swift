@@ -77,4 +77,11 @@ extension ChatListingViewController:UITableViewDelegate,UITableViewDataSource {
         cell?.updateCell(chatroom: chatroom)
         return cell ?? UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chatroom = self.chatrooms[indexPath.row]
+        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: VCStoryBoardIds.chatMessagePage) as? ChatMessagesViewController
+        vc?.chatroom = chatroom
+        self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
 }

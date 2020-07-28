@@ -30,6 +30,7 @@ class OTPVerificationViewController: UIViewController {
     }
     
     @IBAction func onClickVerifyOTP(_ sender: Any) {
+        self.resignFirstResponder()
         loadLoaderView()
         FirebaseAuthManager.shared.signIn(withOTP: otpTextField.text ?? "") { [weak self](error) in
             if let _ = error  {
@@ -61,8 +62,9 @@ class OTPVerificationViewController: UIViewController {
     }
 
     private func openChatListingPage() {
-           let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: VCStoryBoardIds.chatPage) as? ChatListingViewController ?? UIViewController()
-           self.navigationController?.pushViewController(vc, animated: true)
+        FirebaseAuthManager.shared.saveUserInfoIntoLocalDB()
+        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: VCStoryBoardIds.chatListPage) as? ChatListingViewController ?? UIViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     private func loadLoaderView() {

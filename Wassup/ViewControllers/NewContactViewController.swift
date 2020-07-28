@@ -50,11 +50,21 @@ extension NewContactViewController:UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewContactTableViewCell", for: indexPath) as? NewContactTableViewCell
-        cell?.profileImageView.layer.masksToBounds = false
-        cell?.profileImageView.layer.cornerRadius = (cell?.profileImageView.bounds.size.width ?? 0.0)/2.0
-        cell?.profileImageView.clipsToBounds = true
         cell?.updateCell(contact: contacts[indexPath.row])
         return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: VCStoryBoardIds.chatMessagePage) as? ChatMessagesViewController
+        
+        let value = DatabaseManager.shared.checkIfChatExists(imageUrl: self.contacts[indexPath.row].imageUrl ?? "")
+        if value.0 {
+            vc?.chatroomId = value.1
+        }else {
+            vc?.sender = self.contacts[indexPath.row]
+        }
+        
+        self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
 }
