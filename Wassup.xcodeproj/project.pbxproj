@@ -162,19 +162,14 @@
 		5448B65E24CD99E200546151 /* Wassup */ = {
 			isa = PBXGroup;
 			children = (
-				5450DA4B24CF40750031328A /* Helpers */,
+				5450DA5724CFED540031328A /* MainFiles */,
 				5450DA3924CE33E80031328A /* Views */,
-				5448B6A424CDD9E100546151 /* Singletons */,
 				5448B69724CDD30900546151 /* ViewControllers */,
-				5448B69224CD9B6400546151 /* UIHelperFiles */,
-				5448B65F24CD99E200546151 /* AppDelegate.swift */,
-				5448B66124CD99E200546151 /* SceneDelegate.swift */,
-				5448B66524CD99E200546151 /* Main.storyboard */,
-				5448B66B24CD99E600546151 /* Assets.xcassets */,
-				5448B66D24CD99E600546151 /* LaunchScreen.storyboard */,
+				5448B69224CD9B6400546151 /* HelperFiles */,
+				5448B6A424CDD9E100546151 /* Singletons */,
+				5450DA5624CFECF80031328A /* Resources */,
 				5448B67024CD99E600546151 /* Info.plist */,
 				5448B69524CDB22800546151 /* GoogleService-Info.plist */,
-				5448B66824CD99E200546151 /* Wassup.xcdatamodeld */,
 			);
 			path = Wassup;
 			sourceTree = "<group>";
@@ -197,13 +192,15 @@
 			path = WassupUITests;
 			sourceTree = "<group>";
 		};
-		5448B69224CD9B6400546151 /* UIHelperFiles */ = {
+		5448B69224CD9B6400546151 /* HelperFiles */ = {
 			isa = PBXGroup;
 			children = (
+				5448B6A024CDD5E400546151 /* Constants.swift */,
+				5450DA4C24CF40860031328A /* Extensions.swift */,
 				5448B69324CD9B8A00546151 /* Gradient.swift */,
 				5448B6A824CE1B3500546151 /* SpinnerView.swift */,
 			);
-			path = UIHelperFiles;
+			path = HelperFiles;
 			sourceTree = "<group>";
 		};
 		5448B69724CDD30900546151 /* ViewControllers */ = {
@@ -245,13 +242,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		5450DA4B24CF40750031328A /* Helpers */ = {
+		5450DA5624CFECF80031328A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5448B6A024CDD5E400546151 /* Constants.swift */,
-				5450DA4C24CF40860031328A /* Extensions.swift */,
+				5448B66D24CD99E600546151 /* LaunchScreen.storyboard */,
+				5448B66B24CD99E600546151 /* Assets.xcassets */,
+				5448B66824CD99E200546151 /* Wassup.xcdatamodeld */,
 			);
-			path = Helpers;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5450DA5724CFED540031328A /* MainFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5448B66124CD99E200546151 /* SceneDelegate.swift */,
+				5448B65F24CD99E200546151 /* AppDelegate.swift */,
+				5448B66524CD99E200546151 /* Main.storyboard */,
+			);
+			path = MainFiles;
 			sourceTree = "<group>";
 		};
 		719D4F2D983473011559C838 /* Pods */ = {
